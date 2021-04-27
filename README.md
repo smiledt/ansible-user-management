@@ -36,12 +36,18 @@ None
 Example Playbook
 ----------------
 
-    # Deploys the standard user account on the host.
-    - name: Add the standard user account.
-      hosts: deploy
+    - name: Add the ansible management user.
+      hosts: linux
+      gather_facts: false
+      remote_user: "{{ provisioned_user }}"
       become: true
+      vars_files:
+        - roles/user-management/vars/vault
+      vars:
+        ansible_become_pass: "{{ provisioned_pass }}"
+        ansible_ssh_pass: "{{ provisioned_pass }}"
       roles:
-        - role: user-standard
+        - role: user-management
 
 License
 -------
