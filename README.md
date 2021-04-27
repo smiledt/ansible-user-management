@@ -49,6 +49,8 @@ Example Playbook
       roles:
         - role: user-management
 
+This playbook creates the management user on my new virtual machines. Instead of passing through passwords in plain text (like the defaults above), this utilizes an ansible vault file located at roles/user-management/vars/vault.
+
 License
 -------
 
