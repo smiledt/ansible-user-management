@@ -1,0 +1,7 @@
+---
+# defaults file for user-management
+
+management_user: username
+management_pass: pass
+provisioned_user: standard_user
+provisioned_pass: pass

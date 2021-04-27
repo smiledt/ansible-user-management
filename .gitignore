@@ -1,0 +1,8 @@
+# I do not want to accidentally upload a vault password
+.vault_pass
+*.vaultpass
+
+.DS_Store
+
+# Ignore inventory files as well.
+*.inv
