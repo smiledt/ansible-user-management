@@ -2,7 +2,12 @@
 .vault_pass
 *.vaultpass
 
-.DS_Store
-
 # Ignore inventory files as well.
 *.inv
+
+*.retry
+*.pyc
+*.DS_Store
+*.DS_Store?
+*pytestdebug.log
+roles/.DS_Store
