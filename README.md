@@ -18,15 +18,15 @@ This is the user to be deployed on the system.
 
     management_pass: pass
 
-This is the password that will be associated with the new user. This should not be plain text as this example shows, instead it should be presented and stored in a more secure manner.
+This is the password that will be associated with the new user. This should not be plain text as this example shows, instead it should be presented and stored in a more secure manner, like ansible vault.
 
-    provisioned_user: standard_user
+    provisioned_user:
 
 This is the user that should already be present on the system. Ansible will use this user to connect for the first time. 
 
-    provisioned_pass: pass
+    provisioned_pass:
 
-This is the password that ansible uses to connect to the system for the first time. Once again, I do not recommend using plain text like this to store this variable.
+This is the password that ansible uses to connect to the system for the first time. Once again, I do not recommend using plain text to store this variable.
 
 Dependencies
 ------------
@@ -59,7 +59,7 @@ BSD
 Author Information
 ------------------
 
-Derek Smiley - Network Analyst, Homelabber, aspiring System Administrator/Ansible Automation Engineer
+Derek Smiley - Network Analyst, avid Homelabber, and aspiring System Administrator/Ansible Automation Engineer. 
 
 Connect with me on LinkedIn - https://www.linkedin.com/in/derek-smiley/
 
