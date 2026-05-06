@@ -17,7 +17,7 @@
     mode: "0440"
 
 - name: Set authorized SSH key for {{ management_user }}
-  authorized_key:
+  ansible.posix.authorized_key:
     user: "{{ management_user }}"
     state: present
     key: "{{ lookup('file', item) }}"
