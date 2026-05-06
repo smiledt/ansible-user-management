@@ -1,5 +1,0 @@
----
-# vars file for user-management
-
-management_user: ansible
-management_pass: "{{ vault_management_pass }}"
