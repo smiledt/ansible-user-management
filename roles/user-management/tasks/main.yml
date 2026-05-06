@@ -1,20 +1,20 @@
 ---
 # tasks file for management_user
 
-- name: Add the management user {{ management_user }}
-  user:
+- name: Add the management user - {{ management_user }}
+  ansible.builtin.user:
     name: "{{ management_user }}"
     password: "{{ management_pass | password_hash('sha512', 'standardsalt') }}"
     state: present
     update_password: always
 
-- name: Ensure that the management user {{ management_user }} has sudo priveleges
-  lineinfile:
+- name: Ensure that the management user has sudo privileges - {{ management_user }}
+  ansible.builtin.lineinfile:
     dest: /etc/sudoers.d/ansible
-    create: yes
+    create: true
     state: present
     line: "{{ management_user }} ALL=(ALL) NOPASSWD:ALL"
-    mode: 0440
+    mode: "0440"
 
 - name: Set authorized SSH key for {{ management_user }}
   authorized_key:
